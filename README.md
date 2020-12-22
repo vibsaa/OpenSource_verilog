@@ -11,13 +11,15 @@ http://bleyer.org/icarus/
 
 ## commands to run:
 ### A) Verilog on iverilog:
-1) iverilog -o output_filename.vvp input_filename.v
-2) vvp output_filename.vvp
+In here I have used vscode powershell/terminal only to run the commands below directly.
+
+#### 1) iverilog -o output_filename.vvp input_filename.v
+#### 2) vvp output_filename.vvp
 
 ![Screenshot (217)](https://user-images.githubusercontent.com/20024712/102868091-c1446900-445f-11eb-8f37-db3410f03c4e.png)
 ### B) Simulation on GTKwave:
-1) gtkwave output_filename.vcd
-
-![Screenshot (218)](https://user-images.githubusercontent.com/20024712/102868088-c0abd280-445f-11eb-8002-49af83098f6c.png)
+#### 1) gtkwave output_filename.vcd
 After the UI open select the module, and then select and put the available signals to view window.
+![Screenshot (218)](https://user-images.githubusercontent.com/20024712/102868088-c0abd280-445f-11eb-8002-49af83098f6c.png)
+
 
