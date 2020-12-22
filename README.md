@@ -10,10 +10,10 @@ http://bleyer.org/icarus/
 2) Also check 'add to path' option while installing. 
 
 ## commands to run:
-A) Verilog on iverilog:
+### A) Verilog on iverilog:
 1) iverilog -o output_filename.vvp input_filename.v
 2) vvp output_filename.vvp
-B) Simulation on GTKwave:
+### B) Simulation on GTKwave:
 1) gtkwave output_filename.vcd
 
 After the UI open select the module, and then select and put the available signals to view window.
