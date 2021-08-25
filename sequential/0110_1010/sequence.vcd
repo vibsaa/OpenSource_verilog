@@ -1,0 +1,159 @@
+$date
+	Wed Aug 25 15:00:43 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module seqdet_tb $end
+$var wire 1 ! z $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$var reg 1 $ x $end
+$scope module s1 $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var wire 1 $ serial_in $end
+$var reg 3 % NS [2:0] $end
+$var reg 3 & PS [2:0] $end
+$var reg 1 ! serial_out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+b0xx %
+x$
+1#
+0"
+0!
+$end
+#5
+1"
+#10
+0"
+#12
+b1 %
+0$
+#15
+b1 &
+1"
+0#
+#20
+0"
+#22
+b11 %
+1$
+#25
+b101 %
+b11 &
+1"
+#30
+0"
+#35
+b10 %
+b101 &
+1"
+#40
+0"
+#42
+1!
+b100 %
+0$
+#45
+0!
+b1 %
+b100 &
+1"
+#50
+0"
+#52
+b110 %
+1$
+#55
+b101 %
+b110 &
+1"
+#60
+0"
+#62
+1!
+b100 %
+0$
+#65
+0!
+b1 %
+b100 &
+1"
+#70
+0"
+#72
+b110 %
+1$
+#75
+b101 %
+b110 &
+1"
+#80
+0"
+#85
+b10 %
+b101 &
+1"
+#90
+0"
+#92
+1!
+b100 %
+0$
+#95
+0!
+b1 %
+b100 &
+1"
+#100
+0"
+#102
+b110 %
+1$
+#105
+b101 %
+b110 &
+1"
+#110
+0"
+#112
+1!
+b100 %
+0$
+#115
+0!
+b1 %
+b100 &
+1"
+#120
+0"
+#122
+b110 %
+1$
+#125
+b101 %
+b110 &
+1"
+#130
+0"
+#132
+1!
+b100 %
+0$
+#135
+0!
+b1 %
+b100 &
+1"
+#140
+0"
+#142
