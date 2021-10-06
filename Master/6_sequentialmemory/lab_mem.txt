@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+								memory:-
+--------------------------------------------------------------------------------
+agenda :-
+	declare a  memory
+	Specification
+	Size-1kB, 
+	Data Width -32 bit width.
+	Features/ Operations
+	Write(Write random data to particular location) 
+	Read.( Read data from the same location)
+
+Template
+1. Write operation
+	rst=0, posedge clk.
+	Wr_enable-> To start the write operation
+	wdata-> for writing random data to memory
+	addr-> to access memory location 
+2. Read operation
+	rst=0, posedge clk
+	rd_enable-> to start the read operation
+	rdata-> for reading the data from memory
+	addr-> to access memory location
+
+
+Do write and read to memory.
+-----------------------------------------------------------------------------
+	Q. what are the input and output signals we need for memory access?
+	=> inputs clk,rst,addr,wdata,wr_en,rd_en//wr_rd-->wr_rd=1(write)
+														wr_rd=0 (read)
+	   outputs rdata
+-----------------------------------------------------------------------------	
+	Q. How to declare memory of 1kB with 32bit width?
+
+		1KB=>1024*8 bits
+			=>8192 bits
+
+		Depth=>Size/Width=>8192/32
+						 =>256.
+-------------------------------------------------------------------------------
+DESIGN:-
+
+step 1.
+	declare a module mem with inputs and outputs in portlist.
+
+step 2.
+		parameter width= 32  ;
+		parameter depth= 256  ;
+		parameter addr_width= 8  ;
+
+	take depth,addr_width and width as parameter
+	(i)	declare inputs and outputs
+
+			input clk,rst,wr_en,rd_en;
+			input [addr_width-1:0] addr;
+			input [width-1:0] wdata;
+
+			output reg [width-1:0] rdata;
+
+	(ii) declare memory 1kB, 32 bit width
+			reg [width-1:0] mem[depth-1:0];
+
+	
+step 3.
+	write a logic to memory access.
+			
+	algorithm:-
+	at every posedge of clk,
+		-if rst is applied, then-
+			-we have to rst all the memory content
+		-now when rst is not applied(i.e else part)
+			-we have to check if write is happening (i.e check if wr_en pin is high) 
+				-if high then write to memory.
+					(i.e mem[addr]=wdata)
+			-now if read is happening (i.e rd_en is high) 
+				-then read from memory
+					(i.e rdata=mem[addr])
+			(NOTE :- dont write for loop because )
+
+
+
+------------------------------------------------------------------------------
+
+TESTBENCH
+
+step 1:- declare module tb;
+
+step 2:- declare inputs and outputs as reg and wire
+		(declare parameter also)
+step 3:- design and tb connection
+
+step 4:- clk generation;
+		initial begin
+			clk = 0;
+			forever #5 clk = ~clk;
+		end
+
+
+
+step 5:- rst logic
+		when rst applied(i.e rst=1;)
+			-rd_en = 0;
+			-wr_en = 0;
+			-addr = 0;
+			-wdata = 0;
+		hold the rst for one posedge clk
+			- rst=0;(make rst low)
+
+step 6:- logic for write to memory.
+			access the memory using for loop(depth).
+				(at edge of a clk do write)@(posedge clk)
+				addr=i;//this is there for reading and writing to same memory location
+				wdata=?//wt will happen wen i give wdata=10
+				wr_en=?// 1
+			end for loop
+				now again @(posedge clk)
+				make all signals low(wr_en,addr,wdata)
+step 7:- logic to read from memory.
+			access the memory using for loop(depth).https://global.gotomeeting.com/join/302988349
+				(at edge of a clk do read)@(posedge clk)
+				addr=i;//this is there for reading and writing to same memory location
+				rd_en=?
+				end for loop
+				now again @(posedge clk)
+				make signals low(rd_en,addr)
+
+
+step 8:- call $finish
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+===================================================================================================
+
+parameter overriding.
+
+override the parameters to 512 bit of 32 bit width
+take addr_width as (parameter addr_width=6)
+
+mem #(.WIDTH(WIDTH), .DEPTH(DEPTH), .ADDR_WIDTH(ADDR_WIDTH)) dut(clk, rst, addr, wdata, rdata, wr_en, rd_en);
+
+--------------------------------------------------------------------------------------------------
+task
+
+implement the rest logic, memory write logic and memory read logic using task (without arguments first)
+
+then implement it using arguments
+	i.e
+
+	task rd_mem(input reg [ADDR_WIDTH-1:0] start_addr, input reg [ADDR_WIDTH:0] num_locations);
+begin
+	//logic for write
+
+endtask
+
+	task wr_mem(input reg [ADDR_WIDTH-1:0] start_addr, input reg [ADDR_WIDTH:0] num_locations);
+begin
+
+	//logic for read
+endtask
+
+NOTE:-	task defination should be outside initial block
+		and calling of task should be done inside initial block
+
+		wr_mem(0,DEPTH);
+		rd_mem(0,DEPTH);
+--------------------------------------------------------------------------------------------------
+generating testcases
+------------------------------------------------------------------------------------
+- declare testcase variable to get different testcase
+		https://global.gotomeeting.com/join/302988349
+- use $value$plusargs to pass different testcases
+				(test_full_mem and test_quarter_mem)
+
+- use case statements
+
+- generate 2 testcase->
+						- implement full memory write and read testcase
+
+						- implement quarter memory write and read testcase 
+
+

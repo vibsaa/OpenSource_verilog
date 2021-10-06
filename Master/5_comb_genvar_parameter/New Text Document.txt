@@ -1,0 +1,42 @@
+----------------------------------------------------------------
+seed
+---------------------------------------------------------------
+1. write a program to generate random value using seed.
+  here pass seed as user argument(i.e use $value$plusargs)
+2. do this for three different values of seed.
+  
+3. absore the result.
+
+------------------------------------------------------------------
+arrays
+-------------------------------------------------------------------
+1. create integer aray "A" of 10 elements.
+2. assign random values between 40 to 50.
+ and display them using %d
+  display in this format: A[index] = value;
+3. create one more aray "B"of same integer datatype with 10 elements.
+4. copy contents of A to B.
+5. display contents of B using %d
+  display in this format: B[index] = value;
+
+6. compare both array A and B , 
+  if they are equal display "comparision passed "
+  else
+  display "comparision failed"
+8. create one more array "C"of 10 elements. assign random values between 35 to 45.
+   display them using %d
+    display in this format: C[index] = value;
+9. now compare C and A arrays
+  if they are equal display "comparision passed "
+  else
+  display "comparision failed"
+
+ absorve the results.
+--------------------------------------------------------------------
+genvar concept.
+--------------------------------------------------------------------
+1. without genvar concept implement a 4 bit fa using 1 bit fa(hierarchical style)
+2. using genvar concept now implement a 4 bit fa using 1 bit fa.
+
+3. now implement a n bit fa using 1 bit fa
+----------------------------------------------------------------------

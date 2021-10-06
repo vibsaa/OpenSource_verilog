@@ -1,0 +1,2 @@
+pending- 8x1 using 4x1
+and radix conversion using verilog
