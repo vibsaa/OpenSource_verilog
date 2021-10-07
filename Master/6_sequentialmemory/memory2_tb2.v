@@ -56,11 +56,7 @@ end
 
 #100 $finish;
 end
-initial begin
-  $dumpvars;
-  $dumpfile("dump.vcd");
-  
-end
+
 // task to write to memory at some specific locations starting from start_addr and till number of locations = num_loc
   task fd_wr_mem(input [ADDR-1:0]start_loc, [ADDR:0]num_loc);
 begin
