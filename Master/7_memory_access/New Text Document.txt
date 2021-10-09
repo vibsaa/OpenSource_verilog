@@ -1,0 +1,35 @@
+what is a function?
+->0 time
+  only input
+  no delay.
+  function name
+
+
+Q. write a function to add two numbers in verilog and display them.
+  - pass the values of a and b by user
+   ($value$plusargs)
+
+   vsim 
+  run options -> +a=10 +b=20
+
+   initial begin
+    $value$plusargs("a=%0d",a);
+    //b=20;
+    c=add(a,b)
+   end
+ 
+Q. write a function to sub two numbers in verilog.
+  - pass the values of a and b by user
+   ($value$plusargs)
+
+Q. write a function to add array elements in verilog.
+  
+  - take arr1,arr2,arr3 all of size 5.
+  - take array values randomly
+
+
+Q. write a function to implement ALU logic(i.e ADD,SUB,MUL and DIV) using function?
+
+  - use single function to implement this
+  - take function name as alu_fun
+  - pass arguments as a,b,operation to function

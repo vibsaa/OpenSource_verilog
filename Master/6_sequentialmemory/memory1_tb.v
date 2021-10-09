@@ -1,4 +1,4 @@
-
+`include"memory1.v"
 module tb();
 
 parameter WIDTH=32;

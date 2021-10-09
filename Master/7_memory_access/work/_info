@@ -1,0 +1,53 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/VLSI-GURU/VERILOG_GVIM/Assignments/assi-7
+vmemory
+Z1 !s110 1633802381
+!i10b 1
+!s100 gPLNZ^mgVRD=chjzLjOCc2
+I_JW3mSdK1__RZfS4R[YWI3
+R0
+w1633635274
+8memory2.v
+Fmemory2.v
+!i122 10
+L0 1 42
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z4 !s108 1633802381.000000
+!s107 memory2.v|memory2_tb2.v|
+Z5 !s90 -reportprogress|300|memory2_tb2.v|
+!i113 1
+Z6 tCvgOpt 0
+vtb
+R1
+!i10b 1
+!s100 6Wh9Q9GJG<km>dQh;R>Va2
+I41GNIa;m`Hi9N^8mLmz8B1
+R0
+w1633802359
+8memory2_tb2.v
+Fmemory2_tb2.v
+!i122 10
+L0 2 124
+R2
+R3
+r1
+!s85 0
+31
+R4
+Z7 !s107 memory2.v|memory2_tb2.v|
+R5
+!i113 1
+R6

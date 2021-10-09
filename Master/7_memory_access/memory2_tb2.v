@@ -1,4 +1,6 @@
+`include"memory2.v"
 module tb();
+//this is for 1kB with 32 bit data line or width
 
 parameter WIDTH=32;
 parameter DEPTH=256;
@@ -38,9 +40,9 @@ fd_rd_mem(0, DEPTH/8);
 
 end
 
-"fd_wr_bd_rd": begin
-fd_wr_mem(0, DEPTH/4);
-bd_rd_mem(0, DEPTH/4);
+"fd_wr_bd_rd": begin // here i have taken it full just to see how memory contnts will look in a text file
+fd_wr_mem(0, DEPTH);
+bd_rd_mem(0, DEPTH);
 
 end
 "bd_wr_fd_rd": begin
@@ -104,13 +106,13 @@ endtask
 
 task bd_wr_mem(input [ADDR-1:0]start_loc, [ADDR:0]num_loc);
 begin
-$readmemh("index.hex",dut.mem,start_loc, start_loc+num_loc-1 );
+$readmemh("image.hex",dut.mem,start_loc, start_loc+num_loc-1 );
 end
 endtask
 
 task bd_rd_mem(input [ADDR-1:0]start_loc, [ADDR:0]num_loc);
 begin
-$writememb("index.bin",dut.mem,start_loc, start_loc+num_loc-1 );
+$writememb("image.bin",dut.mem,start_loc, start_loc+num_loc-1 );
 end
 endtask
 

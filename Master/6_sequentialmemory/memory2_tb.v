@@ -1,4 +1,5 @@
-module tb();
+`include "memory2.v"
+module tb;
 
 parameter WIDTH=32;
 parameter DEPTH=256;
@@ -67,7 +68,7 @@ initial begin
   
 end
 // task to write to memory at some specific locations starting from start_addr and till number of locations = num_loc
-  task fd_wr_mem(input [ADDR-1:0]start_loc, [ADDR:0]num_loc);
+task fd_wr_mem(input [ADDR-1:0]start_loc, [ADDR:0]num_loc);
 begin
 //wrbar=1;
 for (i=start_loc;i<start_loc+num_loc;i=i+1) begin
