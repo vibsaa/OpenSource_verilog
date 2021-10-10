@@ -1,0 +1,77 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  3 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/VLSI-GURU/VERILOG_GVIM/Assignments/assi-4
+vclk
+!s110 1633858360
+!i10b 1
+!s100 =f3g6e1S>j3ca6OSnBnf^3
+I6]l_kzeYY@TY>JC8ilcXF0
+R0
+w1633858145
+Z1 8clock.v
+Z2 Fclock.v
+!i122 2
+L0 1 14
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OV;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1633858360.000000
+Z5 !s107 clock.v|
+Z6 !s90 -reportprogress|300|clock.v|
+!i113 1
+Z7 tCvgOpt 0
+Xclock_v_unit
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1633867207
+V7D39]626V[=0o:TF>^YgJ1
+r1
+!s85 0
+!i10b 1
+!s100 NYQ;>DKfkSMNMdb`2_B:92
+I7D39]626V[=0o:TF>^YgJ1
+!i103 1
+S1
+R0
+w1633867202
+R1
+R2
+!i122 20
+L0 1 0
+R4
+31
+!s108 1633867207.000000
+R5
+R6
+!i113 1
+R7
+vtb
+!s110 1633868881
+!i10b 1
+!s100 _F<;M<=3he?c1a45?:XY[2
+Izh]GlbhHkbjShNRQW:lQf3
+R0
+w1633868784
+R1
+R2
+!i122 24
+L0 2 34
+R3
+R4
+r1
+!s85 0
+31
+!s108 1633868881.000000
+R5
+R6
+!i113 1
+R7
