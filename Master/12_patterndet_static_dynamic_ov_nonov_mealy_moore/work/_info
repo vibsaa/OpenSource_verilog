@@ -1,0 +1,74 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  3 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/VLSI-GURU/VERILOG_GVIM/Assignments/assi-10-fsm
+vdypat
+Z1 !s110 1634816223
+!i10b 1
+!s100 U1F7=zAXjVPJS[zd^aR0<0
+IY^ezJVN;90QTBl_6`Gid_2
+R0
+w1634816209
+8dypat_nonov.v
+Fdypat_nonov.v
+!i122 27
+L0 3 41
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z4 !s108 1634816222.000000
+!s107 dypat_nonov.v|dypat_tb.v|
+Z5 !s90 -reportprogress|300|dypat_tb.v|
+!i113 1
+Z6 tCvgOpt 0
+vfsm
+!s110 1634725102
+!i10b 1
+!s100 B3MJ?D`Qj]BI0k;i>hcM22
+IJX1SLWezDJWR:kSReV;171
+R0
+w1634724819
+8bbcbc_mealy.v
+Fbbcbc_mealy.v
+!i122 15
+L0 1 56
+R2
+R3
+r1
+!s85 0
+31
+!s108 1634725102.000000
+!s107 bbcbc_mealy.v|bbcbc_mealy_tb.v|
+!s90 -reportprogress|300|bbcbc_mealy_tb.v|
+!i113 1
+R6
+vtb
+R1
+!i10b 1
+!s100 zB3z`1kgE8MLX>ZXE?c[l1
+ITj<PzHV@_>8h^8o]PDGg`1
+R0
+w1634815696
+8dypat_tb.v
+Fdypat_tb.v
+!i122 27
+L0 2 30
+R2
+R3
+r1
+!s85 0
+31
+R4
+Z7 !s107 dypat_nonov.v|dypat_tb.v|
+R5
+!i113 1
+R6
