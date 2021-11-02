@@ -1,0 +1,88 @@
+`include"syncfifo.v"
+module tb;
+parameter WIDTH=8;
+parameter DEPTH=16;
+parameter ADDR_PTR_WIDTH=4;
+
+reg clk, rst, wr_en, rd_en;
+reg [WIDTH-1:0]w_data;
+
+wire [WIDTH-1:0]r_data;
+wire wr_err, rd_err,full, empty;
+
+integer i;
+
+reg [50*8:1] testname;
+
+syfifo dut(clk, rst, wr_en, rd_en,w_data, r_data,full, empty, wr_err, rd_err);
+
+initial begin
+	clk=0;
+	forever #5 clk=~clk;
+
+end
+
+initial begin
+	$value$plusargs("testname=%s", testname);
+	$display("testname=%s", testname);
+	rst=1;
+	wr_en=0;
+	rd_en=0;
+	w_data=0;
+  	@(posedge clk);
+	rst=0;
+
+	case(testname)
+		"test_fifo_full_err":begin
+          write_fifo(DEPTH+1);
+		end
+		"test_fifo_full": begin
+			write_fifo(DEPTH);
+		end
+		"test_empty_error":begin
+          write_fifo(10);
+          read_fifo(12);
+		end
+		"test_fifo_empty":begin
+          write_fifo(10);
+          read_fifo(7);
+          write_fifo(10);
+         read_fifo(13);
+         write_fifo(3);
+		end
+
+	endcase
+
+	#100;
+	$finish;
+
+
+end
+
+
+task write_fifo(input integer num);
+	begin
+		for(i=0; i<num; i=i+1)begin
+			@(posedge clk);
+			wr_en=1;
+			w_data=$random;
+		end
+		@(posedge clk);
+		wr_en=0;
+		w_data=0;
+	end
+endtask
+task read_fifo(input integer num);
+	begin
+		for(i=0; i<num; i=i+1)begin
+			@(posedge clk);
+			rd_en=1;
+		end
+		@(posedge clk);
+		rd_en=0;
+	end
+endtask
+
+endmodule 
+
+
