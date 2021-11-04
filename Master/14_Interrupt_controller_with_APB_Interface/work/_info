@@ -1,0 +1,53 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  3 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/VLSI-GURU/VERILOG_GVIM/Assignments/Interruptcontroller_APB
+vintr_ctrl
+Z1 !s110 1636042274
+!i10b 1
+!s100 WS9AWkfXO_>co6jZ7Ii0Y3
+Ieed][Y3=eLmoc4Rd5mLPB3
+R0
+w1636025815
+8interrupt_control.v
+Finterrupt_control.v
+!i122 2
+L0 1 93
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z4 !s108 1636042274.000000
+!s107 interrupt_control.v|intr_tb.v|
+Z5 !s90 -reportprogress|300|intr_tb.v|
+!i113 1
+Z6 tCvgOpt 0
+vtb
+R1
+!i10b 1
+!s100 AYHl864Pg:>Igc7lLnIWk2
+I0SBE4eM@?n;C72L>b`fT_1
+R0
+w1636042101
+8intr_tb.v
+Fintr_tb.v
+!i122 2
+L0 2 63
+R2
+R3
+r1
+!s85 0
+31
+R4
+Z7 !s107 interrupt_control.v|intr_tb.v|
+R5
+!i113 1
+R6
